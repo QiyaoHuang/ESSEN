@@ -100,7 +100,7 @@ class HeteroNeighborFinder:
         if dv == 0 :
             dv = 1
         v_count,e_count = self.current_graph_count(cut_time)
-        entropy = ((1 -(1/v_count)-(1/(e_count**2 * du*dv ))) / e_count)
+        entropy = ((1 -(1/v_count)-(1/(v_count**2 * du*dv ))) / e_count)
         return entropy      
     
     def get_heterogeneous_neighbor_find_before(self, src_idx, cut_time):
